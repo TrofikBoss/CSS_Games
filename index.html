@@ -32,16 +32,24 @@
                     </div>
                 </div>
             </div>
-            <p>Добро пожаловать в игру "Mouse Hunting CSS". Игра, в которой вам нужно помочь котику поймать мышку при помощи CSS кода. Направь этого прекрасного котика к мышке.</p>
+            <p class="level-1 levelobj">Добро пожаловать в игру "Mouse Hunting CSS". Игра, в которой вам нужно помочь котику поймать мышку при помощи CSS кода. Направь этого прекрасного котика к мышке.</p>
+            <p class="level-2 levelobj hidden">На этом уровне вам нужно выполнить одно очень интересное задание...</p>
             <div class="code-area">
                 <div class="code-area__numbers"><p> 1 2 3 4 5 6 7 8 9 10</p></div>
                 <div class="code-area__write">
-                    <p>.block1 &#123;</p>
-                    <textarea name="line-block1" class="code-input" rows="2" onchange="inpchange(this)"></textarea>
-                    <p>&#125;</p>
-                    <p>.block2 &#123;</p>
-                    <textarea name="line-block2" class="code-input" rows="2" onchange="inpchange(this)"></textarea>
-                    <p>&#125;</p>
+                    <div class="level-1 levelobj">
+                        <p>.block1 &#123;</p>
+                        <textarea name="line-block1" class="code-input" rows="2" onchange="inpchange(this)" id="lineone"></textarea>
+                        <p>&#125;</p>
+                    </div>
+                    <div class="level-2 hidden levelobj">
+                        <p>.block1 &#123;</p>
+                        <textarea name="line-block1" class="code-input" rows="2" onchange="inpchange(this)" id="linetwo"></textarea>
+                        <p>&#125;</p>
+                        <p>.block2 &#123;</p>
+                        <textarea name="line-block2" class="code-input" rows="2" onchange="inpchange(this)" id="linethree"></textarea>
+                        <p>&#125;</p>
+                    </div>
                     <div class="button-next blocked">Следующий</div>
                 </div>
             </div>
@@ -54,7 +62,7 @@
             <div class="block block2"></div>
         </div>
     </div>
-    <script src="scripts/menu.js"></script>
+    <script src="scripts/levelcontrol.js" type="module"></script>
     <script src="scripts/code-translate.js"></script>
 </body>
 </html>
