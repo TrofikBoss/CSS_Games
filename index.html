@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -36,8 +36,11 @@
             <div class="code-area">
                 <div class="code-area__numbers"><p> 1 2 3 4 5 6 7 8 9 10</p></div>
                 <div class="code-area__write">
-                    <p>.block &#123;</p>
-                    <input type="text" name="code">
+                    <p>.block1 &#123;</p>
+                    <textarea name="line-block1" class="code-input" rows="2" onchange="inpchange(this)"></textarea>
+                    <p>&#125;</p>
+                    <p>.block2 &#123;</p>
+                    <textarea name="line-block2" class="code-input" rows="2" onchange="inpchange(this)"></textarea>
                     <p>&#125;</p>
                     <div class="button-next blocked">Следующий</div>
                 </div>
@@ -47,9 +50,11 @@
             </div>
         </div>
         <div class="game-display">
-
+            <div class="block block1"></div>
+            <div class="block block2"></div>
         </div>
     </div>
     <script src="scripts/menu.js"></script>
+    <script src="scripts/code-translate.js"></script>
 </body>
 </html>

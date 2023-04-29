@@ -3,6 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelectorAll(".game-page__menu-centre").forEach(function(menu) {
             menu.innerHTML = `<p>Уровень ${levelselect} из 10</p><div class="arrow-down"></div>`
         })
+        document.querySelectorAll(".game-menu-item").forEach(function(item) {
+            if (item.innerHTML != levelselect) {
+                item.classList.remove("select");
+            } else {
+                item.classList.add("select");
+            }
+        });
     }
     function menucheckbutton() {
         document.querySelectorAll(".game-page__menu-right").forEach(function(but1) {

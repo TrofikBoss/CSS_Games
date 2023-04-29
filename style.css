@@ -24,6 +24,8 @@ body {
     height: 100vh;
     display: flex;
     background-color: #336b7b;
+    padding: 20px;
+    box-sizing: border-box;
 }
 h1 {
     font-family: "Fredoka One";
@@ -88,12 +90,15 @@ p {
 .blocked {
     opacity: 0.7;
 }
-.code-area__write input {
+.code-area__write textarea {
     border: none;
     width: calc(100% - 35px);
+    max-height: 100%;
+    resize: none;
     outline: none;
     font-size: 20px;
     margin-left: 30px;
+    overflow-y: hidden;
 }
 .game-page__links {
     display: flex;
@@ -194,4 +199,21 @@ p {
 .game-menu-item.select {
     border: 3px solid #7bdaf4;
     background-color: #4fa8c1;
+}
+.block {
+    background-color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+@media (max-width: 940px) {
+    .game {
+        flex-direction: column;
+    }
+    .game-page {
+        width: 100%;
+    }
+    .game-display {
+        width: 100%;
+    }
 }
