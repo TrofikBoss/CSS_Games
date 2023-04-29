@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "Fredoka One";
+    src: url(fonts/FredokaOne-Regular.ttf);
+}
+body {
+    margin: 0px;
+    background-color: #4fa8c1;
+}
+.game {
+    display: flex;
+}
+.game-page {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    padding: 30px;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.game-display {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    background-color: #336b7b;
+}
+h1 {
+    font-family: "Fredoka One";
+    font-weight: 500;
+    margin: 0px;
+}
+p {
+    font-family: "Calibri";
+}
+.code-area {
+    width: 100%;
+    height: 260px;
+    border-radius: 10px;
+    display: flex;
+}
+.code-area__numbers {
+    background-color: #b4b4b4;
+    width: 32px;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 20px;
+}
+.code-area__numbers p {
+    margin: 0px;
+    text-align: right;
+}
+.code-area__write {
+    background-color: #e0e0e0;
+    height: 100%;
+    width: calc(100% - 32px);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    color: gray;
+    position: relative;
+}
+.code-area__write p {
+    margin: 0px;
+}
+.button-next {
+    position: absolute;
+    min-width: 81px;
+    padding: 5px 10px;
+    min-height: 24px;
+    background-color: #D11606;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 17px;
+    font-family: "Calibri";
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+}
+.blocked {
+    opacity: 0.7;
+}
+.code-area__write input {
+    border: none;
+    width: calc(100% - 35px);
+    outline: none;
+    font-size: 20px;
+    margin-left: 30px;
+}
+.game-page__links {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.game-page__menu {
+    height: 30px;
+    width: 212px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+.game-page__menu-left, .game-page__menu-right {
+    width: 24px;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 100%;
+}
+.game-page__menu-centre {
+    width: calc(100% - 48px);
+    background-color: rgba(255, 255, 255, 0.2);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.game-page__menu-centre p {
+    margin: 0px;
+}
+.game-page__menu-left, .game-page__menu-right {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+}
+.game-page__menu-left {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    background-image: url(img/svg/arrow-left.svg);
+}
+.game-page__menu-right {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    background-image: url(img/svg/arrow-right.svg);
+}
+.game-page__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.arrow-down {
+    background-image: url(/img/svg/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 10px;
+    height: 100%;
+    background-position: center;
+    margin-left: 5px;
+}
+.game-page__menu-level {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgb(96, 96, 96);
+    z-index: 2;
+    top: 40px;
+}
+.close {
+    display: none;
+}
+.menu-ul {
+    list-style-type: none;
+    font-family: "Calibri";
+    padding: 15px;
+    margin: 0px;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.menu-ul li:not(:nth-child(4n - 3)) {
+    margin-left: 3px;
+}
+.menu-ul li {
+    margin-bottom: 3px;
+}
+.game-menu-item {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    box-sizing: border-box;
+    background-color: #929292;
+    justify-content: center;
+    align-items: center;
+}
+.game-menu-item.select {
+    border: 3px solid #7bdaf4;
+    background-color: #4fa8c1;
+}
