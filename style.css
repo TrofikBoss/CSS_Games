@@ -195,3 +195,14 @@ p {
     border: 3px solid #7bdaf4;
     background-color: #4fa8c1;
 }
+@media (max-width: 940px) {
+    .game {
+        flex-direction: column;
+    }
+    .game-page {
+        width: 100%;
+    }
+    .game-display {
+        width: 100%;
+    }
+}
