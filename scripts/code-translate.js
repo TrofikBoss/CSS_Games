@@ -3,13 +3,20 @@ document.querySelectorAll(".code-input").forEach(function(codeinp) {
         document.body.innerHTML += `<style class="${(codeinp.name).replace("line-", "")}"></style>`;
     }
 })
-function inpchange(x) {
-    document.querySelectorAll(`style.${(x.name).replace("line-", "")}`).forEach(function(st) {
-        st.innerHTML = `.${(x.name).replace("line-", "")} {${x.value}}`;
-    })    
+function checkinputs() {
+    document.querySelectorAll(".levelobj.visible textarea").forEach(function(x) {
+        document.querySelectorAll(`style.${(x.name).replace("line-", "")}`).forEach(function(st) {
+            st.innerHTML = `.${(x.name).replace("line-", "")} {${x.value}}`;
+        }) 
+    })
+    
 }
-function maxlines(maxlines) {
+function inpchange(x) {
+       
+}
+function maxlines() {
     document.querySelectorAll("textarea").forEach(function(texx) {
+        let maxlines = texx.rows;
         var lines = texx.value.split("\n");
         if (lines.length > maxlines) {
             texx.value = lines.slice(0, maxlines).join("\n");
@@ -17,5 +24,6 @@ function maxlines(maxlines) {
     })
 }
 setInterval(() => {
-    maxlines(2);
+    maxlines();
+    checkinputs();
 }, 100);

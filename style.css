@@ -2,9 +2,23 @@
     font-family: "Fredoka One";
     src: url(fonts/FredokaOne-Regular.ttf);
 }
+* {
+    transition-property: move;
+    transition-delay: 0.2s;
+}
 body {
     margin: 0px;
     background-color: #4fa8c1;
+}
+p, li {
+    font-family: "Calibri";
+}
+p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+li {
+    margin-bottom: 5px;
 }
 .game {
     display: flex;
@@ -27,20 +41,23 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
+.gamearea {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
 h1 {
     font-family: "Fredoka One";
     font-weight: 500;
     margin: 0px;
 }
-p {
-    font-family: "Calibri";
-}
 .code-area {
     width: 100%;
-    height: 260px;
+    height: 350px;
     border-radius: 10px;
     display: flex;
-    margin-top: 30px;
+    margin-top: 5px;
 }
 .code-area__numbers {
     background-color: #b4b4b4;
@@ -51,6 +68,7 @@ p {
     box-sizing: border-box;
     padding: 5px;
     font-size: 20px;
+    line-height: 26px;
 }
 .code-area__numbers p {
     margin: 0px;
@@ -70,6 +88,7 @@ p {
 }
 .code-area__write p {
     margin: 0px;
+    font-family: monospace;
 }
 .button-next {
     position: absolute;
@@ -207,8 +226,54 @@ p {
     width: 100px;
     height: 100px;
 }
+.cat {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    background-image: url(/img/Cat1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 2;
+}
+.cat.food {
+    background-image: url(/img/Cat2.png);
+}
+.cat-2 {
+    background-image: url(/img/Cat3.png);
+}
+.cat-2.food {
+    background-image: url(/img/Cat4.png);
+}
+.cat-3 {
+    background-image: url(/img/Cat5.png);
+}
+.cat-3.food {
+    background-image: url(/img/Cat6.png);
+}
+.mouse {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-image: url(/img/mouse.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: 1;
+}
+.mouse-2 {
+    background-image: url(/img/mouse2.png);
+}
+.mouse-3 {
+    background-image: url(/img/mouse3.png);
+}
 .hidden {
     display: none;
+}
+.text-select {
+    background-color: rgba(255, 255, 255, 0.228);
+    padding: 0px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
 }
 @media (max-width: 940px) {
     .game {
